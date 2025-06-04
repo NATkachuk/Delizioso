@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NATkachuk.github.io/Delizioso",
+  "homepage": "https://NATkachuk.github.io/delizioso",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
