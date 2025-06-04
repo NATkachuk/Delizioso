@@ -1,0 +1,25 @@
+@mixin Flex($fd,$jc,$ai,$gp){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gp;
+}
+@mixin Raleway($fw,$fs,$lh){
+    font-family: 'Raleway', sans-serif;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
+@mixin Tinos($fw,$fs,$lh){
+    font-family: 'Tinos', serif;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
+@mixin Poppins($fw,$fs,$lh){
+    font-family: 'Poppins', sans-serif;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
