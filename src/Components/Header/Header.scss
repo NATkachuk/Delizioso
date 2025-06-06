@@ -1,0 +1,36 @@
+@use "../../scss/mixins";
+@use "../../scss/vars";
+@use "../../scss/reset";
+
+.header{
+    @include mixins.Flex(row, space-around, center, 0);
+    padding: 51px;
+    &-logo{
+        @include mixins.Flex(row, flex-start, center, 18px);
+        &__link{
+            @include mixins.Poppins(14px,600,1px);
+            color: vars.$second-color;
+            &--span{
+                color: vars.$third-color;
+            }
+        }
+    }
+    &-container{
+        @include mixins.Flex(row, flex-start, center, 25px);
+        &__cart{
+           background-color: vars.$cart-color;
+           border-radius: 50%;
+           padding: 13px;
+        }
+        &__btn{
+            @include mixins.Flex(row, flex-start, center, 0);
+            background-color: vars.$fourth-color;
+            border-radius:133px;
+            padding: 15px 35px;
+            &-link{
+                @include mixins.Poppins(14px,600,21px);
+                color: vars.$first-color;
+            }
+        }
+    }
+}
