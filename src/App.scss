@@ -10,4 +10,9 @@
 body {
     background-color: vars.$first-color;
     color: vars.$second-color;
+    .button {
+        @include mixins.Poppins(20px, 600, 200%);
+        border-radius: 162.94px;
+        color: vars.$first-color;
+    }
 }

@@ -30,20 +30,13 @@
         &__buttons{
             @include mixins.Flex(row, flex-start, center, 25px);
             &-btn1{
-                @include mixins.Flex(row, center, center, 0);
                 background-color: vars.$third-color;
-                border-radius: 133px;
                 padding: 15px 35px;
-                @include mixins.Poppins(14px,600,21px);
-                color: vars.$first-color;
             }
             &-btn2{
-                @include mixins.Flex(row, center, center, 0);
                 background-color: vars.$fourth-color;
                 border-radius: 133px;
                 padding: 15px 35px;
-                @include mixins.Poppins(14px,600,21px);
-                color: vars.$first-color;
             }
         }
     }   

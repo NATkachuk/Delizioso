@@ -1,0 +1,32 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use '../../../scss/reset';
+
+.section2{
+    @include mixins.Flex(row, center, center, 0);
+    padding: 100px 96px;
+    margin-top: 216px;
+    background-color: vars.$secondBack-color;
+    &-container{
+        @include mixins.Flex(column, flex-start, flex-start, 122px);
+        &__textbox{
+            @include mixins.Flex(column, flex-start, flex-start, 60px);
+            &-title{
+                @include mixins.Tinos(80px,700,110%);
+                color: vars.$second-color;
+              
+                &--orange{
+                    color: vars.$third-color;
+                }
+            }
+            &-text{
+                @include mixins.Poppins(20px,400,200%);
+                color: vars.$second-color;
+            }
+        }
+        &__btn{
+            background-color: vars.$third-color;
+            padding: 15px 35px;
+        }
+    }
+}
