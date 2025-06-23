@@ -1,0 +1,50 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use '../../../scss/reset'; 
+
+.section1{
+    @include mixins.Flex(row, center, center, 2px);
+    padding: 100px 106px;
+    &-container{
+        @include mixins.Flex(column, flex-start, flex-start, 25px);
+        &__box{
+            @include mixins.Flex(row, center, center, 0);
+            background-color: vars.$third-color;
+            border-radius: 126px;
+            padding: 10px 34px;
+            &-text{
+                @include mixins.Poppins(14px,600,110%);
+                color: vars.$first-color;
+            }
+        }
+        &__title{
+            @include mixins.Tinos(80px,700,110%);
+            color: vars.$second-color;
+            width: 60%;
+        }
+        &__text{
+            @include mixins.Poppins(20px,400,200%);
+            color: vars.$second-color;
+            width: 70%;
+        }
+        &__buttons{
+            @include mixins.Flex(row, flex-start, center, 25px);
+            &-btn1{
+                @include mixins.Flex(row, center, center, 0);
+                background-color: vars.$third-color;
+                border-radius: 133px;
+                padding: 15px 35px;
+                @include mixins.Poppins(14px,600,21px);
+                color: vars.$first-color;
+            }
+            &-btn2{
+                @include mixins.Flex(row, center, center, 0);
+                background-color: vars.$fourth-color;
+                border-radius: 133px;
+                padding: 15px 35px;
+                @include mixins.Poppins(14px,600,21px);
+                color: vars.$first-color;
+            }
+        }
+    }   
+}

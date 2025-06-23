@@ -5,21 +5,21 @@
     align-items: $ai;
     gap: $gp;
 }
-@mixin Raleway($fw,$fs,$lh){
+@mixin Raleway($fs,$fw,$lh){
     font-family: 'Raleway', sans-serif;
-    font-weight: $fw;
     font-size: $fs;
+    font-weight: $fw;
     line-height: $lh;
 }
-@mixin Tinos($fw,$fs,$lh){
+@mixin Tinos($fs,$fw,$lh){
     font-family: 'Tinos', serif;
-    font-weight: $fw;
     font-size: $fs;
+    font-weight: $fw;
     line-height: $lh;
 }
-@mixin Poppins($fw,$fs,$lh){
+@mixin Poppins($fs,$fw,$lh){
     font-family: 'Poppins', sans-serif;
-    font-weight: $fw;
     font-size: $fs;
+    font-weight: $fw;
     line-height: $lh;
 }
