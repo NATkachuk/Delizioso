@@ -1,0 +1,86 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section3{
+    @include mixins.Flex(column, center, center, 60px);
+    margin-top: 165px;
+    &__title{
+        @include mixins.Tinos(80px,700,200%);
+    }
+    &-container{
+        @include mixins.Flex(column, center, center, 60px);
+        &__list1{
+            @include mixins.Flex(row, center, center, 28px);
+            &-item{
+                @include mixins.Flex(row, center, center, 0);
+                background-color: vars.$cart-color;
+                border-radius: 163px;
+                padding: 17px 54px;
+                &-link{
+                    @include mixins.Poppins(20px,400,200%);
+                    color: vars.$second-color;
+                }
+            }
+        }
+        &__list2{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            &-item{
+                @include mixins.Flex(column, center, center, 10px);
+                background-color: vars.$cart-color;
+                padding: 34px 20px;
+                border-radius: 70px;
+                &-title{
+                    @include mixins.Poppins(30px,600,200%);
+                    color: vars.$second-color;
+                }
+                &-imags{
+                    @include mixins.Flex(row, center, center, 10px);
+                }
+                &-text{
+                    @include mixins.Poppins(14px,400,200%);
+                    color: vars.$second-color;
+                    width: 72%;
+                }
+                &-price{
+                    @include mixins.Flex(row, center, center, 34px);
+                    width: 100%;
+                    &-text{
+                        @include mixins.Poppins(25px,600,38px);
+                       
+                    }
+                    &-btn{
+                        @include mixins.Flex(row, center, center, 0);
+                        background-color: vars.$third-color;
+                        color: vars.$first-color;
+                        padding: 11px 36px;
+                        border-radius: 163px;
+                    }
+                }
+            }
+        }
+        &__box{
+            @include mixins.Flex(row, center, center, 20px);
+            &-btn1{
+                background-color: vars.$second-color;
+                padding: 16px 20px;
+                border-radius: 15px;
+            }
+            &-btn2{
+                background-color: vars.$third-color;
+                padding: 16px 20px;
+                border-radius: 15px;
+                color: vars.$first-color;
+            }
+            &-btn3{
+                background-color: vars.$first-color;
+                border-radius: 15px;
+                padding: 25px 16px;
+            }
+        }
+    }
+}
