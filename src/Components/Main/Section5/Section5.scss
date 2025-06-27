@@ -1,0 +1,27 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section5{
+    @include mixins.Flex(column, center, center, 150px);
+    margin-top: 175px;
+    &__title{
+        @include mixins.Tinos(80px,700,200%);
+    }
+    &-wrap{
+        @include mixins.Flex(row, center, center, 30px);
+        .section5-box{
+            @include mixins.Flex(column, center, center, 30px);
+            &__text1{
+                @include mixins.Poppins(25px,600,200%);
+            }
+            &__text2{
+                @include mixins.Poppins(25px,400,200%);
+            }
+        }
+    }
+    &__btn {
+        background-color: vars.$third-color;
+        padding: 17px 78px;
+    }
+}
