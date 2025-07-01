@@ -1,0 +1,44 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section6{
+    margin: 200px 24px;
+    &-wrap{
+        @include mixins.Flex(column, center, center, 32px);
+        padding: 110px 0px;
+        margin-top: 175px;
+        background-image: url(../../../assets/Homepage/png/WorkHours.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__title{
+        @include mixins.Tinos(80px,700,200%);
+        color: vars.$first-color;
+    }
+    &__text{
+        @include mixins.Poppins(40px,600,200%);
+        color: vars.$first-color;
+    }
+    &__textbox{
+        @include mixins.Flex(column, center, flex-end, 5px);
+        &-text{
+            @include mixins.Poppins(20px,400,200%);
+            color: vars.$first-color;
+        }
+    }
+    &__buttons{
+        @include mixins.Flex(row, center, center, 24px);
+        &-btn1{
+            background-color: vars.$third-color;
+            color: vars.$first-color;
+            padding: 17px 62px;
+            border-radius: 163px;
+        }
+        &-btn2{
+            background-color: vars.$cart-color;
+            padding: 17px 55px;
+            border-radius: 163px;
+        }
+    }
+}
