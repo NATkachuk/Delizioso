@@ -1,0 +1,44 @@
+@use "../../scss/mixins";
+@use "../../scss/vars";
+@use "../../scss/reset";
+
+.footer{
+    @include mixins.Flex(column, flex-start, center, 120px);
+    background-color: vars.$second-color;
+    padding: 145px;
+    .logo__link {
+        color: vars.$first-color;
+    }
+    &-container{
+        @include mixins.Flex(row, flex-start, flex-start, 66px);
+       &__box{
+           @include mixins.Flex(column, flex-start, flex-start, 30px);
+            &-text{
+                @include mixins.Poppins(20px,400,200%);
+                color: vars.$first-color;
+                width: 50%;
+            }
+            &-socials{
+                @include mixins.Flex(row, flex-start, flex-start, 30px);
+            }
+       }
+       &__box2{
+            @include mixins.Flex(row, flex-start, flex-start, 70px);
+            &-list{
+                @include mixins.Flex(column, flex-start, flex-start, 15px);
+                &-title{
+                    @include mixins.Poppins(20px,600,200%);
+                    color: vars.$third-color;
+                }
+            }
+            &-link{
+                @include mixins.Poppins(20px,400,200%);
+                color: vars.$first-color;
+            }
+       }
+    }
+    &__text{
+        @include mixins.Poppins(20px,400,200%);
+        color: vars.$first-color;
+    }
+}

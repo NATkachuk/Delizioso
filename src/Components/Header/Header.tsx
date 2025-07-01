@@ -6,10 +6,10 @@ import Cart from "../../assets/Homepage/svg/Cart.svg"
 function Header() {
   return (
     <header className="header">
-        <div className="header-logo">
-            <img className="header-logo__img" src={Logo} alt="logo" />
-            <Link to="/" className="header-logo__link">Delizi<span className="header-logo__link--span">oso</span></Link>
-        </div>
+        <Link to="/" className="logo">
+            <img className="logo__img" src={Logo} alt="logo" />
+            <p  className="logo__link">Delizi<span className="logo__link--span">oso</span></p>
+        </Link>
         <Nav />
         <div className="header-container">
             <div className="header-container__cart">

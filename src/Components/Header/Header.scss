@@ -5,16 +5,6 @@
 .header{
     @include mixins.Flex(row, space-around, center, 0);
     padding: 51px;
-    &-logo{
-        @include mixins.Flex(row, flex-start, center, 18px);
-        &__link{
-            @include mixins.Poppins(14px,600,1px);
-            color: vars.$second-color;
-            &--span{
-                color: vars.$third-color;
-            }
-        }
-    }
     &-container{
         @include mixins.Flex(row, flex-start, center, 25px);
         &__cart{

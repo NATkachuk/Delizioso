@@ -15,4 +15,14 @@ body {
         border-radius: 162.94px;
         color: vars.$first-color;
     }
+    .logo{
+        @include mixins.Flex(row, flex-start, center, 18px);
+        &__link{
+            @include mixins.Poppins(14px,600,1px);
+            color: vars.$second-color;
+            &--span{
+                color: vars.$third-color;
+            }
+        }
+    }
 }
