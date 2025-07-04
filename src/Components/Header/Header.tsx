@@ -3,6 +3,7 @@ import "./Header.scss"
 import Logo from "../../assets/Homepage/svg/Logo.svg"
 import Nav from "./Nav/Nav"
 import Cart from "../../assets/Homepage/svg/Cart.svg"
+import Home from "../../assets/Homepage/svg/Home.svg"
 function Header() {
   return (
     <header className="header">
@@ -18,6 +19,7 @@ function Header() {
             <button className="header-container__btn">
                 <Link to="signin" className="header-container__btn-link">Log in</Link>
             </button>
+            <img src={Home} alt="Home" className="header-container__burger" />
         </div>
     </header>
   )

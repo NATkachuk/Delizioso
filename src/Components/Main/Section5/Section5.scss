@@ -25,3 +25,26 @@
         padding: 17px 78px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .section5{
+        @include mixins.Flex(column, center, center, 43px);
+        margin-top: 94px;
+        &__title{
+            @include mixins.Tinos(35px,700,135%);
+        }
+        &-wrap{
+            @include mixins.Flex(column, center, center, 30px);
+            .section5-box{
+                @include mixins.Flex(column, center, center, 5px);
+                &__text1{
+                    @include mixins.Poppins(20px,600,200%);
+                }
+                &__text2{
+                    @include mixins.Poppins(20px,400,200%);
+                }
+            }
+        }
+    }
+    
+}

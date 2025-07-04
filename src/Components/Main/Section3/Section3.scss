@@ -57,7 +57,7 @@
                         @include mixins.Flex(row, center, center, 0);
                         background-color: vars.$third-color;
                         color: vars.$first-color;
-                        padding: 11px 36px;
+                        padding: 10px 15px;
                         border-radius: 163px;
                     }
                 }
@@ -80,6 +80,62 @@
                 background-color: vars.$first-color;
                 border-radius: 15px;
                 padding: 25px 16px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .section3{
+        @include mixins.Flex(column, center, center, 50px);
+        margin-top: 62px;
+        &__title{
+            @include mixins.Tinos(35px,700,115%);
+            text-align: center;
+            width: 70%;
+        }
+        &-container{
+            @include mixins.Flex(column, center, flex-start, 30px);
+            &__list1{
+                @include mixins.Flex(row, center, center, 20px);
+                margin-right: -121px;
+                &-item{
+                    @include mixins.Flex(row, center, center, 0);
+                    background-color: vars.$cart-color;
+                    border-radius: 163px;
+                    padding: 8px 17px;
+                    &-link{
+                        @include mixins.Poppins(12px,600,200%);
+                        color: vars.$second-color;
+                    }
+                }
+            }
+            &__list2{
+                display:grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                align-items: center;
+                justify-content: center;
+                &-item{
+                    padding: 12px 20px;
+                    border-radius: 24px;
+                    &-title{
+                        @include mixins.Poppins(13px,600,21px);
+                    }
+                    &-text{
+                        @include mixins.Poppins(12px,400,120%);
+                        width: 100%;
+                    }
+                    &-price{
+                        &-text{
+                            @include mixins.Poppins(16px,600,24px);
+                        }
+                    }
+                }
+            }
+            &__box{
+               display: none;
             }
         }
     }

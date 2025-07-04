@@ -26,3 +26,12 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 375px) {
+    body{
+        .button {
+            @include mixins.Poppins(12px, 600, 200%);
+        }
+    }
+    
+}

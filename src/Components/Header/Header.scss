@@ -22,5 +22,26 @@
                 color: vars.$first-color;
             }
         }
+        &__burger {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .header{
+        @include mixins.Flex(row, space-between, center, 0);
+        padding: 25px;
+        width: 100%;
+        &-container{
+           &__btn{
+               display: none;
+           }
+
+           &__burger{
+               display: block;
+           }
+        }
     }
 }

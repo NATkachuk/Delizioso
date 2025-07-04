@@ -42,7 +42,7 @@ function Section3() {
                     <p className="section3-container__list2-item-text">{product.description}</p>
                     <div className="section3-container__list2-item-price">
                         <p className="section3-container__list2-item-price-text">$12.05</p>
-                        <button className="section3-container__list2-item-price-btn">Order now</button>
+                        <button className="section3-container__list2-item-price-btn">+</button>
                     </div>
                 </li>
             ))}

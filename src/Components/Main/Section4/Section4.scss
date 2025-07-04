@@ -42,3 +42,33 @@
         }   
     }
 }
+
+@media screen and (max-width: 375px) {
+    .section4{
+      @include mixins.Flex(column-reverse, center, flex-start, 40px);
+      margin-top: 62px;
+      padding: 90px 25px;
+      &-box1{
+        display: none;
+      }
+      &-box2{
+          @include mixins.Flex(column, flex-start, flex-start, 40px);
+          width: 100%;
+          &__textbox{
+              @include mixins.Flex(column, flex-start, flex-start, 32px);
+              &-title{
+                  @include mixins.Tinos(35px,700,110%);
+                  width: 70%;
+              }
+              &-text{
+                  @include mixins.Poppins(12px,400,200%);
+                  width: 95%;
+              }
+          }
+           &__btn{
+               padding: 13px 41px;
+               @include mixins.Poppins(14px, 600, 200%);
+           }   
+       }
+    }
+}

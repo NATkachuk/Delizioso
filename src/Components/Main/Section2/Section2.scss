@@ -30,3 +30,29 @@
         }
     }
 }
+
+@media screen and (max-width: 375px) {
+    .section2{
+        @include mixins.Flex(column-reverse, flex-start, flex-start, 35px);
+        margin-top: 0px;
+        padding: 40px 25px;
+        &-container{
+            @include mixins.Flex(column, flex-start, flex-start, 53px);
+            &__textbox{
+                @include mixins.Flex(column, flex-start, flex-start, 21px);
+                &-title{
+                    @include mixins.Tinos(35px,700,110%);
+                }
+                &-text{
+                    @include mixins.Poppins(12px,400,200%);
+                    width: 95%;
+                }
+            }
+            &__btn{
+                padding: 14px 34px;
+                @include mixins.Poppins(14px, 600, 200%);
+            }
+        }
+    }
+    
+}

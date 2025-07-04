@@ -42,3 +42,42 @@
         }
     }
 }
+
+
+@media screen and (max-width: 375px) {
+    .section6{
+        margin: 20px 0px;
+        padding: 10px;
+       &-wrap{
+           @include mixins.Flex(column, center, center, 32px);
+           padding: 30px;
+           margin-top: 0px;
+          
+       }
+       &__title{
+           @include mixins.Tinos(40px,700,115%);
+           text-align: center
+       }
+       &__text{
+           @include mixins.Poppins(16px,600,24px);
+       }
+       &__textbox{
+           @include mixins.Flex(column, center, flex-end, 5px);
+           &-text{
+               @include mixins.Poppins(12px,400,18px);
+           }
+       }
+       &__buttons{
+           @include mixins.Flex(column-reverse, center, center, 15px);
+           &-btn1{
+               padding: 11px 54px;
+               @include mixins.Poppins(14px, 600, 200%);
+           }
+           &-btn2{
+               padding: 11px 47px;
+               @include mixins.Poppins(14px, 600, 200%);
+           }
+       }
+    }
+    
+}

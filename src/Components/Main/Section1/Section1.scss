@@ -41,3 +41,40 @@
         }
     }   
 }
+
+@media screen and (max-width: 375px) {
+    .section1{
+       @include mixins.Flex(column, center, flex-start, 40px);
+       padding: 40px 15px;
+       &-container{
+        &__box{
+            padding: 6px 18px;
+            &-text{
+                @include mixins.Poppins(12px,400,110%);
+            }
+        }
+        &__title{
+            @include mixins.Tinos(60px,700,100%);
+        }
+        &__text{
+            @include mixins.Poppins(12px,400,200%);
+            width: 94%;
+        }
+        &__buttons{
+            @include mixins.Flex(row, flex-start, center, 25px);
+            &-btn1{
+                @include mixins.Poppins(12px, 600, 200%);
+                background-color: vars.$third-color;
+                padding: 10px 33px;
+            }
+            &-btn2{
+                @include mixins.Poppins(12px, 600, 200%);
+                background-color: vars.$fourth-color;
+                border-radius: 133px;
+                padding: 10px 33px;
+            }
+        }
+       }
+    }
+    
+}

@@ -42,3 +42,24 @@
         color: vars.$first-color;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .footer{
+        @include mixins.Flex(column, center, flex-start, 60px);
+        padding: 92px 25px;
+        &-container{
+            @include mixins.Flex(column, center, flex-start, 30px);
+            &__box{
+                @include mixins.Flex(column, center, flex-start, 30px);
+                &-text{
+                    @include mixins.Poppins(14px,400,200%);
+                    width: 100%;
+                }
+            }
+            &__box2{
+                @include mixins.Flex(column, center, flex-start, 30px);
+            }
+        }
+    }
+    
+}
