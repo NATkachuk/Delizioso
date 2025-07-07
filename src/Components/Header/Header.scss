@@ -2,46 +2,169 @@
 @use "../../scss/vars";
 @use "../../scss/reset";
 
-.header{
-    @include mixins.Flex(row, space-around, center, 0);
-    padding: 51px;
-    &-container{
-        @include mixins.Flex(row, flex-start, center, 25px);
-        &__cart{
-           background-color: vars.$cart-color;
-           border-radius: 50%;
-           padding: 13px;
-        }
-        &__btn{
-            @include mixins.Flex(row, flex-start, center, 0);
-            background-color: vars.$fourth-color;
-            border-radius:133px;
-            padding: 15px 35px;
-            &-link{
-                @include mixins.Poppins(14px,600,21px);
-                color: vars.$first-color;
-            }
-        }
-        &__burger {
-            display: none;
-        }
+.header {
+  @include mixins.Flex(row, space-around, center, 0);
+  padding: 51px;
+  background-color: vars.$first-color; // #FFFFFF
+  width: 100%;
+  box-sizing: border-box;
+
+  .logo {
+    @include mixins.Flex(row, center, center, 10px);
+    text-decoration: none;
+
+    &__img {
+      width: 40px;
+      height: 40px;
     }
+
+    &__link {
+      @include mixins.Poppins(24px, 700, 30px);
+      color: vars.$second-color; // #311F09
+      margin: 0;
+
+      &--span {
+        color: vars.$third-color; // #FF8A00
+      }
+    }
+  }
+
+  .nav {
+    &__list {
+      @include mixins.Flex(row, flex-start, center, 45px);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex; // Завжди видимі в десктопі
+
+      &.active { // Для мобільного режиму при відкритому бургер-меню
+        @include mixins.Flex(column-reverse, flex-end, flex-end, 15px);
+        display: flex;
+        position: absolute;
+        top: 80px;
+        right: 25px;
+        background-color: vars.$first-color; // #FFFFFF
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &__item {
+      margin: 0;
+    }
+
+    &__link {
+      @include mixins.Poppins(13px, 400, 21px);
+      color: vars.$second-color; // #311F09
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: vars.$third-color; // #FF8A00
+      }
+
+      &.nav__link--active {
+        @include mixins.Poppins(13px, 600, 21px);
+        color: vars.$third-color; // #FF8A00
+      }
+    }
+  }
+
+  &-container {
+    @include mixins.Flex(row, flex-start, center, 25px);
+
+    &__cart {
+      background-color: vars.$cart-color; // #f3f1ee
+      border-radius: 50%;
+      padding: 13px;
+      cursor: pointer;
+
+      &__img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__btn {
+      @include mixins.Flex(row, flex-start, center, 0);
+      background-color: vars.$fourth-color; // #3FA72F
+      border-radius: 133px;
+      padding: 15px 35px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(vars.$fourth-color, 10%);
+      }
+
+      &-link {
+        @include mixins.Poppins(14px, 600, 21px);
+        color: vars.$first-color; // #FFFFFF
+        text-decoration: none;
+      }
+    }
+
+    &__burger {
+      display: none;
+      cursor: pointer;
+      padding: 13px;
+      background: none;
+      border: none;
+
+      &__img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &__close-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+
+      &__img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
 }
 
-
 @media screen and (max-width: 375px) {
-    .header{
-        @include mixins.Flex(row, space-between, center, 0);
-        padding: 25px;
-        width: 100%;
-        &-container{
-           &__btn{
-               display: none;
-           }
+  .header {
+    @include mixins.Flex(row, space-between, center, 0);
+    padding: 25px;
 
-           &__burger{
-               display: block;
-           }
+    .nav {
+      &__list {
+        display: none; // Ховаємо за замовчуванням у мобільному режимі
+
+        &.active { // Показуємо при відкритому бургер-меню
+          display: flex;
         }
+      }
     }
+
+    &-container {
+      &__btn {
+        display: none;
+      }
+
+      &__burger {
+        display: block;
+      }
+
+      &__cart {
+        padding: 0;
+      }
+
+      &__close-btn {
+        display: flex; // Показуємо кнопку закриття в мобільному режимі
+      }
+    }
+  }
 }
