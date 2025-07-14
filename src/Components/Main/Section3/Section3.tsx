@@ -1,7 +1,6 @@
 import "./Section3.scss";
 import { products } from "../../../Data/Data";
 import type { Product } from "../../../Data/Data";
-import { NavLink } from "react-router-dom";
 import LeftArrow from "../../../assets/Homepage/svg/LeftArrow.svg";
 import RightArrow from "../../../assets/Homepage/svg/RightArrow.svg";
 import Star from "../../../assets/Homepage/svg/Star.svg";
