@@ -14,12 +14,16 @@
             @include mixins.Flex(row, center, center, 28px);
             &-item{
                 @include mixins.Flex(row, center, center, 0);
-                background-color: vars.$cart-color;
-                border-radius: 163px;
-                padding: 17px 54px;
                 &-link{
                     @include mixins.Poppins(20px,400,200%);
                     color: vars.$second-color;
+                    background-color: vars.$cart-color;
+                    border-radius: 163px;
+                    padding: 17px 54px;
+                    &--active{
+                        color: vars.$first-color;
+                        background-color: vars.$second-color;
+                    }
                 }
             }
         }

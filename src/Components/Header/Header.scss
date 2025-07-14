@@ -5,7 +5,7 @@
 .header {
   @include mixins.Flex(row, space-around, center, 0);
   padding: 51px;
-  background-color: vars.$first-color; // #FFFFFF
+  background-color: vars.$first-color; 
   width: 100%;
   box-sizing: border-box;
 
@@ -20,11 +20,11 @@
 
     &__link {
       @include mixins.Poppins(24px, 700, 30px);
-      color: vars.$second-color; // #311F09
+      color: vars.$second-color; 
       margin: 0;
 
       &--span {
-        color: vars.$third-color; // #FF8A00
+        color: vars.$third-color; 
       }
     }
   }
@@ -35,15 +35,15 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex; // Завжди видимі в десктопі
+      display: flex; 
 
-      &.active { // Для мобільного режиму при відкритому бургер-меню
+      &.active { 
         @include mixins.Flex(column-reverse, flex-end, flex-end, 15px);
         display: flex;
         position: absolute;
         top: 80px;
         right: 25px;
-        background-color: vars.$first-color; // #FFFFFF
+        background-color: vars.$first-color;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -56,17 +56,17 @@
 
     &__link {
       @include mixins.Poppins(13px, 400, 21px);
-      color: vars.$second-color; // #311F09
+      color: vars.$second-color;
       text-decoration: none;
       transition: color 0.3s ease;
 
       &:hover {
-        color: vars.$third-color; // #FF8A00
+        color: vars.$third-color; 
       }
 
       &.nav__link--active {
         @include mixins.Poppins(13px, 600, 21px);
-        color: vars.$third-color; // #FF8A00
+        color: vars.$third-color; 
       }
     }
   }
@@ -75,7 +75,7 @@
     @include mixins.Flex(row, flex-start, center, 25px);
 
     &__cart {
-      background-color: vars.$cart-color; // #f3f1ee
+      background-color: vars.$cart-color;
       border-radius: 50%;
       padding: 13px;
       cursor: pointer;
@@ -88,7 +88,7 @@
 
     &__btn {
       @include mixins.Flex(row, flex-start, center, 0);
-      background-color: vars.$fourth-color; // #3FA72F
+      background-color: vars.$fourth-color; 
       border-radius: 133px;
       padding: 15px 35px;
       border: none;
@@ -96,12 +96,12 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: darken(vars.$fourth-color, 10%);
+        background-color: vars.$fourth-color;
       }
 
       &-link {
         @include mixins.Poppins(14px, 600, 21px);
-        color: vars.$first-color; // #FFFFFF
+        color: vars.$first-color; 
         text-decoration: none;
       }
     }
@@ -141,9 +141,9 @@
 
     .nav {
       &__list {
-        display: none; // Ховаємо за замовчуванням у мобільному режимі
+        display: none; 
 
-        &.active { // Показуємо при відкритому бургер-меню
+        &.active { 
           display: flex;
         }
       }
@@ -163,7 +163,7 @@
       }
 
       &__close-btn {
-        display: flex; // Показуємо кнопку закриття в мобільному режимі
+        display: flex; 
       }
     }
   }

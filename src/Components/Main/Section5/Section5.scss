@@ -2,49 +2,73 @@
 @use "../../../scss/vars";
 @use "../../../scss/reset";
 
-.section5{
-    @include mixins.Flex(column, center, center, 150px);
-    margin-top: 175px;
-    &__title{
-        @include mixins.Tinos(80px,700,200%);
-    }
-    &-wrap{
-        @include mixins.Flex(row, center, center, 30px);
-        .section5-box{
-            @include mixins.Flex(column, center, center, 30px);
-            &__text1{
-                @include mixins.Poppins(25px,600,200%);
-            }
-            &__text2{
-                @include mixins.Poppins(25px,400,200%);
-            }
+.section5 {
+  @include mixins.Flex(column, center, center, 150px);
+  margin-top: 175px;
+  &__title {
+    @include mixins.Tinos(80px, 700, 200%);
+  }
+  &-wrap {
+    @include mixins.Flex(column, center, center, 30px);
+    .section5-initial,
+    .section5-extra {
+      @include mixins.Flex(row, center, center, 30px);
+      .section5-box {
+        @include mixins.Flex(column, center, center, 30px);
+        width: 200px;
+        &__img {
+          width: 100%; 
+          height: auto; 
+          object-fit: cover; 
+          border-radius: 30px;
         }
+        &__text1 {
+          @include mixins.Poppins(25px, 600, 200%);
+        }
+        &__text2 {
+          @include mixins.Poppins(25px, 400, 200%);
+        }
+      }
     }
-    &__btn {
-        background-color: vars.$third-color;
-        padding: 17px 78px;
-    }
+  }
+  &__btn {
+    background-color: vars.$third-color;
+    padding: 17px 78px;
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 375px) {
-    .section5{
-        @include mixins.Flex(column, center, center, 43px);
-        margin-top: 94px;
-        &__title{
-            @include mixins.Tinos(35px,700,135%);
-        }
-        &-wrap{
-            @include mixins.Flex(column, center, center, 30px);
-            .section5-box{
-                @include mixins.Flex(column, center, center, 5px);
-                &__text1{
-                    @include mixins.Poppins(20px,600,200%);
-                }
-                &__text2{
-                    @include mixins.Poppins(20px,400,200%);
-                }
-            }
-        }
+  .section5 {
+    @include mixins.Flex(column, center, center, 43px);
+    margin-top: 94px;
+    &__title {
+      @include mixins.Tinos(35px, 700, 135%);
     }
-    
+    &-wrap {
+      .section5-initial,
+      .section5-extra {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .section5-box {
+          @include mixins.Flex(column, center, center, 5px);
+          &__img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+          &__text1 {
+            @include mixins.Poppins(20px, 600, 200%);
+          }
+          &__text2 {
+            @include mixins.Poppins(20px, 400, 200%);
+          }
+        }
+      }
+    }
+    &__btn {
+      margin-top: 20px;
+    }
+  }
 }
