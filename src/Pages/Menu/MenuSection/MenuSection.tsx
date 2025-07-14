@@ -5,8 +5,6 @@ import LeftArrow from "../../../assets/Homepage/svg/LeftArrow.svg";
 import RightArrow from "../../../assets/Homepage/svg/RightArrow.svg";
 import Star from "../../../assets/Homepage/svg/Star.svg";
 import { useState } from "react";
-import Footer from "../../../Components/Footer/Footer";
-import Header from "../../../Components/Header/Header";
 
 function MenuSection() {
   const [currentCategory, setCurrentCategory] = useState("All category");
