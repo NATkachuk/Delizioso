@@ -1,0 +1,54 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section1-reservation{
+    @include mixins.Flex(row, flex-start, center, 86px);
+    padding: 118px 0px;
+    .reservation-form{
+        @include mixins.Flex(column, center, flex-start, 40px);
+        &__title{
+            @include mixins.Tinos(80px,700,110%);
+            margin-bottom: 9px;
+        }
+        &__item{
+            width: 100%;
+            padding: 39px 50px;
+            background-color: vars.$cart-color;
+            border-radius: 20px;
+        }
+        &__btn{
+            width: 100%;
+            background-color: vars.$third-color;
+            border-radius: 15px;
+            padding: 23px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .section1-reservation{
+        @include mixins.Flex(column, center, center, 40px);
+        padding: 60px 0px;
+        .reservation-form{
+            @include mixins.Flex(column, center, center, 40px);
+            width: 80%;
+            &__title{
+                @include mixins.Tinos(30px,700,34px);
+            }
+            &__item{
+                width: 100%;
+                padding: 39px 50px;
+                background-color: vars.$cart-color;
+                border-radius: 20px;
+            }
+            &__btn{
+                width: 100%;
+                background-color: vars.$third-color;
+                border-radius: 15px;
+                padding: 23px 20px;
+            }
+        }
+    }
+    
+}

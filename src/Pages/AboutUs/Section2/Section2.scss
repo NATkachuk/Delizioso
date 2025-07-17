@@ -1,0 +1,71 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section2-about{
+    @include mixins.Flex(row, center, center, 103px);
+    padding: 100px 52px;
+    .section2-container{
+        @include mixins.Flex(column, center, center, 47px);
+        &__textbox{
+            @include mixins.Flex(column, center, flex-start, 60px);
+            &-title{
+                @include mixins.Tinos(80px,700,110%);
+                color: vars.$second-color;
+                 width: 72%;
+                &--orange{
+                    color: vars.$third-color;
+                }
+            }
+            &-text{
+                @include mixins.Poppins(40px,600,60px);
+            }
+        }
+        &__box{
+            @include mixins.Flex(column, flex-start, flex-start, 0);
+            &-text{
+                @include mixins.Poppins(30px,300,200%);
+                width: 67%;
+            }
+            &-img2{
+                margin-left: 468px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .section2-about{
+        @include mixins.Flex(column, center, center, 47px);
+        padding: 100px 25px;
+        .section2-container{
+            @include mixins.Flex(column, center, center, 47px);
+            &__textbox{
+                @include mixins.Flex(column, center, flex-start, 20px);
+                &-title{
+                    @include mixins.Tinos(30px,700,110%);
+                    color: vars.$second-color;
+                     width: 72%;
+                    &--orange{
+                        color: vars.$third-color;
+                    }
+                }
+                &-text{
+                    @include mixins.Poppins(16px,600,24px);
+                }
+            }
+            &__box{
+                @include mixins.Flex(column, flex-start, flex-start, 0);
+                &-text{
+                    @include mixins.Poppins(14px,300,200%);
+                    width: 94%;
+                }
+                &-img2{
+                    margin-left: 227px;
+                }
+            }
+        }
+        
+    }
+}

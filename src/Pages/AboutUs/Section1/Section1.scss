@@ -1,0 +1,56 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section1-about{
+    @include mixins.Flex(column, center, center, 0);
+    .section1-box{
+        @include mixins.Flex(row, center, center, 68px);
+        &__textbox{
+            @include mixins.Flex(column, center, flex-start, 60px);
+            &-title{
+                @include mixins.Tinos(80px,700,110%);
+                &--orange{
+                    color: vars.$third-color;
+                }
+            }
+            &-text{
+                @include mixins.Poppins(20px,400,200%);
+                width: 76%;
+            }
+        }
+        &__text {
+            @include mixins.Poppins(20px,400,200%);
+            width: 32%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .section1-about{
+        @include mixins.Flex(column, center, center, 0);
+        .section1-box{
+            @include mixins.Flex(column-reverse, center, center, 68px);
+            &__textbox{
+                @include mixins.Flex(column, center, center, 60px);
+                &-title{
+                    @include mixins.Tinos(30px,700,34px);
+                    text-align: center;
+                    width: 100%;
+                }
+                &-text{
+                    @include mixins.Poppins(12px,400,200%);
+                    width: 81%;
+                }
+            }
+            &__text {
+                @include mixins.Poppins(12px,400,200%);
+                width: 82%;
+            }
+        }
+        .section1-box--reverse{
+            @include mixins.Flex(column-reverse, center, center, 68px);
+        }
+    }
+}
