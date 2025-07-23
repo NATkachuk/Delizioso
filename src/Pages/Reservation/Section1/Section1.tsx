@@ -1,5 +1,6 @@
 import "./Section1.scss"
 import Reservation1 from "../../../assets/Reservation/png/Reservation1.png"
+import { Link } from "react-router-dom"
 function Section1() {
   return (
     <section className="section1-reservation">
@@ -55,7 +56,7 @@ function Section1() {
                 <option value="15">14</option>
                 <option value="16">15</option>
              </select>
-             <button type="submit" className="reservation-form__btn button">Book now</button>
+             <button type="submit" className="reservation-form__btn button"><Link to="/reservation/confirm" className="reservation-form__btn-link">Book now</Link></button>
         </form>
     </section>
   )

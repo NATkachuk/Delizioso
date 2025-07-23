@@ -1,0 +1,201 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section1-confirm{
+    @include mixins.Flex(column, center, center, 53px);
+    padding: 118px 60px;
+    &__title{
+        @include mixins.Tinos(80px,700,115%);
+    }
+    .section1-container{
+        padding: 50px 133px;
+        border-radius: 20px;
+        background-color: vars.$Reservation-color;
+        &__text{
+            @include mixins.Poppins(20px,600,110%);
+            width: 100%;
+        }
+    }
+    .section1-container2{
+        @include mixins.Flex(row, center, center, 40px);
+        .form{
+            @include mixins.Flex(column, center, flex-start, 30px);
+            &-text{
+                @include mixins.Poppins(25px,600,38px);
+            }
+            &-input{
+                width: 100%;
+                padding: 39px 50px;
+                background-color: vars.$cart-color;
+                border-radius: 20px;
+            }
+            &-phone {
+                @include mixins.Flex(row, center, center, 20px);
+                &__dropdown{
+                    @include mixins.Flex(row, center, center, 11px);
+                    &-country{
+                        @include mixins.Flex(row, center, center, 20px);
+                    }
+                }
+                &__flag {
+                    width: 48px;
+                }
+            }
+            &-textarea{
+                background-color: vars.$cart-color;
+                width: 100%;
+                padding: 40px 50px;
+            }
+            &-box {
+                @include mixins.Flex(row, center, center, 20px);
+                &__text{
+                    @include mixins.Poppins(20px,400,38px);
+                }
+            }
+            &-button {
+                @include mixins.Poppins(25px,400,110%);
+                padding: 36px 136px;
+                background-color: vars.$third-color;
+                color: vars.$first-color;
+                border-radius: 15px;
+            }
+        }
+        &__box{
+            @include mixins.Flex(column, center, flex-start, 50px);
+            width: 39%;
+            &-cont1{
+                @include mixins.Flex(column, center, flex-start, 38px);
+                background-color: vars.$cart-color;
+                padding: 35px 40px;
+                &-text{
+                    @include mixins.Poppins(25px,600,38px);
+                    margin-bottom: 9px;
+                }
+                &-wrap{
+                    @include mixins.Flex(row, center, center, 36px);
+                    &-text{
+                        @include mixins.Poppins(20px,400,110%);
+                    }
+                }
+            }
+            &-cont2{
+                @include mixins.Flex(column, center, flex-start, 38px);
+                &-text{
+                    @include mixins.Poppins(25px,600,38px);
+                    margin-bottom: 15px;
+                }
+                &-textbox{
+                    @include mixins.Flex(column, center, flex-start, 25px);
+                    &-text{
+                        @include mixins.Poppins(20px,400,30px);
+                        width: 81%;
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+@media screen and (max-width: 375px) {
+    .section1-confirm{
+        padding: 120px 15px;
+        &__title{
+            @include mixins.Tinos(30px,700,115%);
+        }
+        .section1-container{
+            padding: 50px 20px;
+            border-radius: 20px;
+            background-color: vars.$Reservation-color;
+            &__text{
+                @include mixins.Poppins(12px,400,100%);
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .section1-container2{
+            @include mixins.Flex(column-reverse, center, center, 40px);
+            .form{
+                @include mixins.Flex(column, center, flex-start, 20px);
+                width: 81%;
+                &-text{
+                    @include mixins.Poppins(14px,600,21px);
+                }
+                &-input{
+                    width: 100%;
+                    padding: 39px 22px;
+                    background-color: vars.$cart-color;
+                    border-radius: 20px;
+                }
+                &-phone {
+                    @include mixins.Flex(row, center, center, 20px);
+                    &__dropdown{
+                        @include mixins.Flex(row, center, center, 11px);
+                        &-country{
+                            @include mixins.Flex(row, center, center, 20px);
+                        }
+                    }
+                    &__flag {
+                        width: 24px;
+                    }
+                }
+                &-textarea{
+                    background-color: vars.$cart-color;
+                    width: 100%;
+                    padding: 40px 50px;
+                }
+                &-box {
+                    @include mixins.Flex(row, center, center, 12px);
+                    &__text{
+                        @include mixins.Poppins(12px,400,18px);
+                    }
+                }
+                &-button {
+                    @include mixins.Poppins(15px,400,110%);
+                    padding: 22px 45px;
+                    background-color: vars.$third-color;
+                    color: vars.$first-color;
+                    border-radius: 10px;
+                    width: 100%;
+                }
+            }
+            &__box{
+                @include mixins.Flex(column, center, center, 22px);
+                width: 100%;
+                &-cont1{
+                    @include mixins.Flex(column, center, flex-start, 15px);
+                    background-color: vars.$cart-color;
+                    padding: 35px 40px;
+                    &-text{
+                        @include mixins.Poppins(14px,600,21px);
+                        margin-bottom: 0px;
+                    }
+                    &-wrap{
+                        @include mixins.Flex(row, center, center, 17px);
+                        &-text{
+                            @include mixins.Poppins(12px,400,18px);
+                        }
+                    }
+                }
+                &-cont2{
+                    @include mixins.Flex(column, center, center, 15px);
+                    &-text{
+                        @include mixins.Poppins(14px,600,21px);
+                        margin-bottom: 15px;
+                    }
+                    &-textbox{
+                        @include mixins.Flex(column, center, center, 15px);
+                        &-text{
+                            @include mixins.Poppins(12px,400,18px);
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+    
+}
