@@ -1,0 +1,52 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+
+.section3-SecondConfirm{
+    @include mixins.Flex(row, center, center, 173px);
+    margin-bottom: 70px;
+    .form{
+        &-area{
+            background-color: vars.$cart-color;
+            width: 100%;
+            padding: 40px 50px;
+        }
+    }
+    .section3-textbox{
+        @include mixins.Flex(column, center, flex-start, 40px);
+        width: 34%;
+        &__title{
+            @include mixins.Poppins(25px,600,38px);
+            width: 65%;
+        }
+        &__cont{
+            @include mixins.Flex(column, center, flex-start, 20px);
+            &-text{
+                @include mixins.Poppins(20px,400,30px);
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 375px) {
+    .section3-SecondConfirm{
+        @include mixins.Flex(column, center, center, 30px);
+        padding: 0px 25px;
+        .section3-textbox{
+            @include mixins.Flex(column, center, center, 40px);
+            width: 100%;
+            &__title{
+                @include mixins.Poppins(25px,600,38px);
+                width: 100%;
+            }
+            &__cont{
+                @include mixins.Flex(column, center, center, 20px);
+                &-text{
+                    @include mixins.Poppins(20px,400,30px);
+                }
+            }
+        }
+    }
+    
+}

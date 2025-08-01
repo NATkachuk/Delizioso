@@ -1,0 +1,63 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section2-SecondConfirm{
+    @include mixins.Flex(column, center, center, 0px);
+    .section2-container{
+        @include mixins.Flex(row, center, center, 60px);
+        padding: 50px 63px;
+      .section2-box{
+        @include mixins.Flex(column, flex-start, flex-start, 24px);
+        &__title{
+          @include mixins.Poppins(25px,600,38px);
+        }
+        &__cont{
+          @include mixins.Flex(row, center,center, 20px);
+          &-text{
+            @include mixins.Poppins(20px,400,110%);
+          }
+        }
+      }
+      &__buttons{
+        @include mixins.Flex(column, center, center, 20px);
+        &-btn1{
+          @include mixins.Flex(row, center, center, 20px);
+          padding: 29px 60px;
+          @include mixins.Poppins(20px, 400, 110%);
+          background-color: vars.$SecondConfirm-colorBtn1;
+          border-radius: 20px;
+        }
+        &-btn2{
+          padding: 29px 60px;
+          @include mixins.Flex(row, center, center, 20px);
+          @include mixins.Poppins(20px, 400, 110%);
+          background-color: vars.$SecondConfirm-colorBtn2;
+          border-radius: 20px;
+        }
+      }
+    }
+}
+
+
+@media  screen and (max-width: 375px) {
+  .section2-SecondConfirm{
+    @include mixins.Flex(column, center, center, 0px);
+    .section2-container{
+      @include mixins.Flex(column, center, center, 54px);
+      padding: 50px 0px;
+      &__buttons{
+        @include mixins.Flex(row, center, center, 20px);
+        &-btn1{
+          padding: 17px 24px;
+          @include mixins.Poppins(13px, 400, 110%);
+        }
+        &-btn2{
+          padding: 17px 24px;
+          @include mixins.Poppins(13px, 400, 110%);
+        }
+      }
+    }
+  }
+  
+}

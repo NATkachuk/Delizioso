@@ -56,7 +56,7 @@ function Section1() {
                 <option value="15">14</option>
                 <option value="16">15</option>
              </select>
-             <button type="submit" className="reservation-form__btn button"><Link to="/reservation/confirm" className="reservation-form__btn-link">Book now</Link></button>
+             <button type="submit" className="reservation-form__btn button"><Link to="confirm" className="reservation-form__btn-link">Book now</Link></button>
         </form>
     </section>
   )

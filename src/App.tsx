@@ -7,6 +7,7 @@ import Menu from './Pages/Menu/Menu'
 import AboutUs from './Pages/AboutUs/AboutUs'
 import Reservation from './Pages/Reservation/Reservation'
 import ConfirmReservation from './Pages/ConfirmReservation/ConfirmReservation'
+import SecondConfirm from './Pages/SecondConfirm/SecondConfirm'
 function App() {
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="AboutUs" element={<AboutUs />} />
           <Route path="Reservation" element={<Reservation />} />
           <Route path="Reservation/Confirm" element={<ConfirmReservation />} />
+          <Route path="Reservation/Confirm/SecondConfirm" element={<SecondConfirm />} />
         </Routes>
       </BrowserRouter>
     </>

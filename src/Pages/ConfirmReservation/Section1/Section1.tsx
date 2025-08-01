@@ -5,6 +5,7 @@ import type { Country } from "../../../Data/Country";
 import calender from "../../../assets/ConfirmReserv/svg/calender.svg"
 import Time from "../../../assets/ConfirmReserv/svg/Time.svg"
 import people from "../../../assets/ConfirmReserv/svg/people.svg"
+import { Link } from "react-router-dom";
 
 const Section1: React.FC = () => {
   const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
@@ -73,7 +74,7 @@ const Section1: React.FC = () => {
             <input type="radio" className="form-box__input" />
             <p className="form-box__text">Sign me up to receive dining offers and news from this restaurant by email.</p>
           </div>
-          <button className="form-button">Confirm reservation</button>
+          <button className="form-button"><Link to="/Reservation/Confirm/SecondConfirm" className="form-button__link">Confirm reservation</Link></button>
         </form>
         <div className="section1-container2__box">
           <div className="section1-container2__box-cont1">
