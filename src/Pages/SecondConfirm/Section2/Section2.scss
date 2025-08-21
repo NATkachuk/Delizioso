@@ -55,6 +55,10 @@
         &-btn2{
           padding: 17px 24px;
           @include mixins.Poppins(13px, 400, 110%);
+          &-link{
+            @include mixins.Flex(row, center, center, 20px);
+            color: vars.$first-color;
+          }
         }
       }
     }

@@ -6,6 +6,7 @@ import time from "../../../assets/SecondConfirm/svg/time.svg"
 import people from "../../../assets/SecondConfirm/svg/people.svg"
 import modify from "../../../assets/SecondConfirm/svg/modify.svg"
 import cancel from "../../../assets/SecondConfirm/svg/cancel.svg"
+import { Link } from "react-router-dom"
 function Section2() {
   return (
     <section className="section2-SecondConfirm">
@@ -28,7 +29,7 @@ function Section2() {
             </div>
             <div className="section2-container__buttons">
                 <button className="section2-container__buttons-btn1">Modify <img src={modify} alt="modify" className="section2-container__buttons-btn-img" /></button>
-                <button className="section2-container__buttons-btn2">Cancel <img src={cancel} alt="cancel" className="section2-container__buttons-btn-img" /></button>
+                <button className="section2-container__buttons-btn2"><Link to="/Reservation/CancelConfirm"  className="section2-container__buttons-btn2-link">Cancel</Link> <img src={cancel} alt="cancel" className="section2-container__buttons-btn2-img" /></button>
             </div>
         </div>
     </section>

@@ -59,6 +59,9 @@
                 background-color: vars.$third-color;
                 color: vars.$first-color;
                 border-radius: 15px;
+                &__link{
+                    color: vars.$first-color;
+                }
             }
         }
         &__box{

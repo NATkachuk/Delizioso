@@ -1,0 +1,35 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+
+.section1-cancelConfirm{
+    @include mixins.Flex(column, center, flex-start, 32px);
+    padding: 50px 63px;
+    background-color: vars.$third-color;
+    width: 100%;
+    &__title{
+        @include mixins.Poppins(40px,400,110%);
+        color: vars.$first-color;
+        width: 60%;
+    }
+     &__box{
+        @include mixins.Flex(row, flex-start, center, 16px);
+        &-text{
+            @include mixins.Poppins(20px,400,110%);
+            color: vars.$first-color;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .section1-cancelConfirm{
+        padding: 35px 15px;
+       &__title{
+            @include mixins.Poppins(20px,400,110%);
+            width: 100%;
+       }
+    }
+}
