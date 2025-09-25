@@ -48,7 +48,7 @@ const Header: React.FC = () => {
             </NavLink>
           </li>
           <li className="nav__item">
-            <NavLink to="/" className={({ isActive }) => `nav__link ${isActive ? "nav__link--active" : ""}`}>
+            <NavLink to="ContactUs" className={({ isActive }) => `nav__link ${isActive ? "nav__link--active" : ""}`}>
               Contact us
             </NavLink>
           </li>

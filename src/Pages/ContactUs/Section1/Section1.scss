@@ -1,0 +1,88 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.section1-ContactUs{
+    @include mixins.Flex(column, center, center, 36px);
+    padding: 100px 0;
+     .section1-textbox{
+        @include mixins.Flex(column, center, center, 36px);
+        &__title{
+            @include mixins.Tinos(80px,700,92px);
+        }
+         &__text{
+            @include mixins.Poppins(25px,400,38px);
+            width: 76%;
+            text-align: center;
+        }
+     }
+     .form{
+        @include mixins.Flex(column, center, center, 50px);
+        &-wrap{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+        &-input{
+            width: 100%;
+            padding: 39px 50px;
+            background-color: vars.$cart-color;
+            border-radius: 20px;
+        }
+        &-textarea{
+            background-color: vars.$cart-color;
+            width: 100%;
+            padding: 40px 50px;
+        }
+     }
+     .section1-btn{
+        padding: 36px 226px;
+        border-radius: 20px;
+        @include mixins.Poppins(20px,400,200%);
+        background-color: vars.$third-color;
+        color: vars.$first-color;
+        &-link {
+            color: vars.$first-color;
+        }
+     }
+}
+
+
+@media screen and (max-width: 375px) {
+    .section1-ContactUs{
+        @include mixins.Flex(column, center, center, 36px);
+        padding: 50px 0;
+         .section1-textbox{
+            @include mixins.Flex(column, center, center, 36px);
+            &__title{
+                @include mixins.Tinos(30px,700,34px);
+            }
+             &__text{
+                @include mixins.Poppins(12px,400,18px);
+                width: 80%;
+                text-align: center;
+            }
+         }
+         .form{
+            @include mixins.Flex(column, center, center, 50px);
+            &-wrap{
+                @include mixins.Flex(column, center, center, 50px);
+            }
+            &-input{
+                width: 100%;
+                padding: 39px 50px;
+                background-color: vars.$cart-color;
+                border-radius: 20px;
+            }
+            &-textarea{
+                background-color: vars.$cart-color;
+                width: 81%;
+                padding: 40px 50px;
+            }
+         }
+         .section1-btn{
+            padding: 22px 130px;
+            border-radius: 12px;
+         }
+    }
+}
