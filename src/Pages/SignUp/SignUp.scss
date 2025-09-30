@@ -1,0 +1,41 @@
+@use "../../scss/mixins";
+@use "../../scss/vars";
+@use "../../scss/reset";
+
+.section1-signUp{
+    @include mixins.Flex(row, center, center, 20px);
+    &__wrapper{
+        @include mixins.Flex(column, center, center, 60px);
+    }
+    &__textbox{
+        @include mixins.Flex(column, center, flex-start, 60px);
+        &-title{
+            @include mixins.Tinos(50px,700,59px);
+            align-self: center;
+        }
+        &-text{
+            @include mixins.Poppins(20px,400,200%);
+        }
+        &-link{
+            @include mixins.Poppins(20px,400,200%);
+            color: vars.$Link-color;
+        }
+    }
+    &__form{
+        @include mixins.Flex(column, center, center, 40px);
+        &-input{
+            width: 100%;
+            padding: 25px 50px;
+            background-color: vars.$cart-color;
+            border-radius: 20px;
+        }
+        &-btn{
+            @include mixins.Poppins(20px,500,30px);
+            width: 100%;
+            background-color: vars.$third-color;
+            color: vars.$first-color;
+            border-radius: 15px;
+            padding: 23px 20px;
+        }
+    }
+}
