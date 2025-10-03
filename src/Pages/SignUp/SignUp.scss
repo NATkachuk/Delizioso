@@ -29,6 +29,9 @@
             background-color: vars.$cart-color;
             border-radius: 20px;
         }
+        &-error{
+            color: vars.$CancelConfirm-colorBtn;
+        }
         &-btn{
             @include mixins.Poppins(20px,500,30px);
             width: 100%;

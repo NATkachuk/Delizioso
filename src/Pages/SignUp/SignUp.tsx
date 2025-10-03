@@ -35,11 +35,11 @@ function SignUp() {
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="section1-signUp__form">
           <input {...register("email")} className="section1-signUp__form-input" placeholder="Email Address" />
-          <p className="error">{errors.email?.message}</p>
+          <p className="section1-signUp__form-error">{errors.email?.message}</p>
           <input {...register("password")} className="section1-signUp__form-input" placeholder="Password" />
-          <p className="error">{errors.password?.message}</p>
+          <p className="section1-signUp__form-error">{errors.password?.message}</p>
           <input {...register("confirmPassword")} className="section1-signUp__form-input" placeholder="Confirm Password"/>
-          <p className="error">{errors.confirmPassword?.message}</p>
+          <p className="section1-signUp__form-error">{errors.confirmPassword?.message}</p>
           <button type="submit" className="section1-signUp__form-btn">Log in</button> 
         </form>
       </div>
