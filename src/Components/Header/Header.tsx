@@ -63,7 +63,7 @@ const Header: React.FC = () => {
       </nav>
       <div className="header-container" style={{ display: isOpen ? "none" : "flex" }}>
         <div className="header-container__cart">
-          <img src={Cart} alt="Cart" className="header-container__cart-img" />
+          <Link to="Cart"><img src={Cart} alt="Cart" className="header-container__cart-img" /></Link>
         </div>
         <button className="header-container__btn">
           <Link to="signin" className="header-container__btn-link">Log in</Link>

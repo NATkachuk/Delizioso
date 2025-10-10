@@ -1,0 +1,51 @@
+@use "../../scss/mixins";
+@use "../../scss/vars";
+@use "../../scss/reset";
+
+.cart{
+    padding: 100px 0px;
+    &__title{
+        @include mixins.Poppins(20px,600,30px);
+        text-align: center;
+    }
+    &__empty{
+        @include mixins.Poppins(20px,600,30px);
+        color:vars.$CancelConfirm-colorBtn;
+        text-align: center;
+    }
+    &__item{
+        @include mixins.Flex(column, flex-start, center, 30px);
+        padding: 40px 0px;
+        border-bottom: 1px solid vars.$cart-color;
+
+        &-name{
+            @include mixins.Poppins(20px,400,30px);   
+        }
+        &-price{
+            @include mixins.Poppins(20px,400,30px);
+        }
+        &-quantity{
+            @include mixins.Poppins(20px,400,30px);
+        }
+        &-action {
+            @include mixins.Flex(row, center, center, 30px);
+            &-delete{
+                @include mixins.Poppins(20px,400,30px);
+                background-color: vars.$third-color;
+                color: vars.$first-color;
+                padding: 10px 60px;
+                border-radius: 40px;
+            }
+            &-decrement{
+                @include mixins.Poppins(20px,400,30px);
+            }
+            &-increment{
+                @include mixins.Poppins(20px,400,30px);
+            }
+        }
+    }
+    &__total {
+        @include mixins.Poppins(20px,600,30px);
+        text-align: center;
+    }
+}

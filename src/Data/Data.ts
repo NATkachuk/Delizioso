@@ -18,23 +18,24 @@ export interface Product {
   name: string;
   description: string;
   imageUrl: string;
-  category: string
+  category: string;
+  price: number;
 }
 
 export const products: Product[] = [
-  { id: 1, name: 'Spaghetti', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Spaghetti, category: 'Lunch'},
-  { id: 2, name: 'Gnocchi', description: 'Lorem ipsum dolor sit amet, consecte...',  imageUrl:Gnocchi, category: 'Dinner'},
-  { id: 3, name: 'Ravioli', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Ravioli, category: 'Dinner' },
-  { id: 4, name: 'Penne Alla Vodka', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: PenneAllaVodka, category: 'Lunch' },
-  { id: 5, name: 'Risoto', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Risoto, category: 'Dinner' },
-  { id: 6, name: 'Splizza Signature', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: SplizzaSignature, category: 'Lunch' },
-  { id: 7, name: 'Bloody Mary', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: BloodyMary, category: 'Drink' },
-  { id: 8, name: 'Cake With Nicota', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: CakeWithNicota, category: 'Dessert' },
-  { id: 9, name: 'Caprese Cake', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: CapreseCake, category: 'Dessert' },
-  { id: 10, name: 'Fritbata', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Fritbata, category: 'Lunch' },
-  { id: 11, name: 'Lasabna', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Lasabna, category: 'Dinner' },
-  { id: 12, name: 'Negroni', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Negroni, category: 'Drink' },
-  { id: 13, name: 'Screwdriver', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Screwdriver, category: 'Drink' },
-  { id: 14, name: 'Tiramusu', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Tiramusu, category: 'Dessert' },
-  { id: 15, name: 'Cabrese', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Cabrese, category: 'Lunch' },
+  { id: 1, name: 'Spaghetti', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Spaghetti, category: 'Lunch', price: 12.99 },
+  { id: 2, name: 'Gnocchi', description: 'Lorem ipsum dolor sit amet, consecte...',  imageUrl:Gnocchi, category: 'Dinner', price: 12.99 },
+  { id: 3, name: 'Ravioli', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Ravioli, category: 'Dinner', price: 12.99 },
+  { id: 4, name: 'Penne Alla Vodka', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: PenneAllaVodka, category: 'Lunch', price: 12.99 },
+  { id: 5, name: 'Risoto', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Risoto, category: 'Dinner', price: 12.99 },
+  { id: 6, name: 'Splizza Signature', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: SplizzaSignature, category: 'Lunch', price: 12.99 },
+  { id: 7, name: 'Bloody Mary', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: BloodyMary, category: 'Drink' , price: 12.99},
+  { id: 8, name: 'Cake With Nicota', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: CakeWithNicota, category: 'Dessert', price: 12.99 },
+  { id: 9, name: 'Caprese Cake', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: CapreseCake, category: 'Dessert', price: 12.99 },
+  { id: 10, name: 'Fritbata', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Fritbata, category: 'Lunch', price: 12.99 },
+  { id: 11, name: 'Lasabna', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Lasabna, category: 'Dinner', price: 12.99 },
+  { id: 12, name: 'Negroni', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Negroni, category: 'Drink', price: 12.99 },
+  { id: 13, name: 'Screwdriver', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Screwdriver, category: 'Drink', price: 12.99 },
+  { id: 14, name: 'Tiramusu', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Tiramusu, category: 'Dessert', price: 12.99 },
+  { id: 15, name: 'Cabrese', description: 'Lorem ipsum dolor sit amet, consecte...', imageUrl: Cabrese, category: 'Lunch', price: 12.99 },
 ];
